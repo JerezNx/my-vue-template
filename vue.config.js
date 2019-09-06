@@ -1,6 +1,8 @@
 
 const webpack = require('webpack');
 module.exports = {
+	// outputDir:'my_dist',//默认即为dist
+	productionSourceMap:false,//编译移除map文件
 	devServer: {
 		// host: 'localhost',
 		host: "127.0.0.1",
@@ -23,6 +25,13 @@ module.exports = {
 		// 		secure: false
 		// 	},
 		// }
+	},
+	chainWebpack: config => {
+		config.module
+			.rule('images')
+			.use('url-loader')
+			.loader('url-loader')
+			.tap(options => Object.assign(options, { limit: 10240 }))//设置图片
 	},
 	configureWebpack: config => {
 		require('vux-loader').merge(config, {
