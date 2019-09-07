@@ -41,7 +41,10 @@ Vue.use(Mint);
 // Vue.component(Cell.name, Cell)
 
 // 四、全局jquery配置
-// import $ from 'jquery'
+import $ from 'jquery'
+window.$ = $;
+window.jQuery = $;
+// import jSignature from 'jsignature'
 // Vue.prototype.$ = $;
 
 Vue.config.productionTip = false
