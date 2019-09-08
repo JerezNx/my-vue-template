@@ -3,9 +3,6 @@ const webpack = require('webpack');
 module.exports = {
 	// outputDir:'my_dist',//默认即为dist
 	// productionSourceMap:false,//编译移除map文件
-	// externals:{
-	// 	jSignature:'jSignature'
-	// },
 	devServer: {
 		// host: 'localhost',
 		host: "127.0.0.1",

@@ -1,0 +1,10 @@
+/* vscode中别名引用设置 */
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}
